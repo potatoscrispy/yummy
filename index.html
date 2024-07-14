@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-color2">
+    <div id="mySidenav" class="d-flex">
+        <div class="sidenav-content text-white p-4 d-flex flex-column justify-content-between">
+            <ul class="sidebar-options cursor list-unstyled d-flex flex-column gap-3 fs-5">
+                <li id="search">
+                    <div class="animate-sidebar-options">
+                        Search</div>
+                </li>
+                <li id="categories">
+                    <div class="animate-sidebar-options">Categories</div>
+                </li>
+                <li id="area">
+                    <div class="animate-sidebar-options">Area</div>
+                </li>
+                <li id="ingredient">
+                    <div class="animate-sidebar-options">Ingredient</div>
+                </li>
+                <li id="contact">
+                    <div class="animate-sidebar-options">Contact Us</div>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                <div class="nav-footer-links">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                    <i class="fa-brands fa-twitter fs-5"></i>
+                    <i class="fas fa-globe fs-5"></i>
+                    <p class="fs-6">Copyright Â© 2019 All Rights
+                        Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sidenav-label bg-white py-4">
+            <img src="images/logo.png" alt="logo" class="w-75">
+            <i id="nav-btn" class="fas fa-bars fs-1"></i>
+            <div class="sidenav-links">
+                <i class="fas fa-globe fs-5"></i>
+                <i class="fas fa-share-alt fs-5"></i>
+            </div>
+        </div>
+    </div>
+    <section id="mainSection">
+        <div id="searchFood" class="container w-75 d-none">
+            <div class="my-5 row">
+                <div class="col-6">
+                    <input type="text" name="searchByName" id="searchByName" placeholder="Search By Name"
+                        class="form-control bg-transparent text-white fs-4">
+                </div>
+                <div class="col-6">
+                    <input type="text" name="searchByLetter" id="searchByLetter" maxlength="1"
+                        placeholder="Search By First Letter" class="form-control bg-transparent text-white fs-4">
+                </div>
+            </div>
+        </div>
+        <div id="main-data" class="container my-4">
+            <div id="data" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            </div>
+        </div>
+        <div id="present-meal" class="container my-4 d-none">
+
+        </div>
+        <div id="contact-form" class="container w-75 my-5 d-none">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="name" type="text" class="form-control"
+                        placeholder="Enter Your Name">
+                    <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Special characters and numbers not allowed
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="email" type="email" class="form-control "
+                        placeholder="Enter Your Email">
+                    <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Email not valid *exemple@yyy.zzz
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="phone" type="text" class="form-control "
+                        placeholder="Enter Your Phone">
+                    <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Enter valid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="age" type="number" class="form-control "
+                        placeholder="Enter Your Age">
+                    <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Enter valid age
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="password" type="password" class="form-control "
+                        placeholder="Enter Your Password">
+                    <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="validInputs()" id="repassword" type="password" class="form-control "
+                        placeholder="Repassword">
+                    <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Enter valid repassword
+                    </div>
+                </div>
+            </div>
+            <button id="submitBtn" disabled="true" class="btn btn-outline-danger px-2 mt-3">Submit</button>
+        </div>
+        <div id="loader-container" class="w-100 vh-100 position-relative">
+            <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center d-none"
+                id="loader">
+                <div class="d-flex">
+                    <span class="loader"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
