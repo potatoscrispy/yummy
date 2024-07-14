@@ -43,6 +43,7 @@ $(document).ready(function () {
     closeNavbar();
     $("#searchFood").removeClass("d-none");
     $("#present-meal").addClass("d-none");
+    $("#contact-form").addClass("d-none");
     $("#searchByName").val("");
     $("#searchByLetter").val("");
     $("#data").html("");
@@ -51,6 +52,7 @@ $(document).ready(function () {
     closeNavbar();
     $("#searchFood").addClass("d-none");
     $("#present-meal").addClass("d-none");
+    $("#contact-form").addClass("d-none");
     $("#loader-container").removeClass("d-none");
     $.ajax({
       type: "GET",
@@ -66,6 +68,7 @@ $(document).ready(function () {
   $("#area").on("click", function () {
     closeNavbar();
     $("#searchFood").addClass("d-none");
+    $("#contact-form").addClass("d-none");
     $("#present-meal").addClass("d-none");
     $("#loader-container").removeClass("d-none");
     $.ajax({
@@ -84,6 +87,7 @@ $(document).ready(function () {
     closeNavbar();
     $("#searchFood").addClass("d-none");
     $("#present-meal").addClass("d-none");
+    $("#contact-form").addClass("d-none");
     $("#loader-container").removeClass("d-none");
     $.ajax({
       type: "GET",
