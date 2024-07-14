@@ -146,7 +146,7 @@ $(document).ready(function () {
 });
 
 function validInputs() {
-  if (/^[A-Za-z]*$/.test($("#name").val())) {
+  if (/^[A-Za-z]{1,}$/.test($("#name").val())) {
     $("#nameAlert").addClass("d-none");
     if (/^[a-zA-Z]+(?:[\.\-\_][a-zA-Z0-9]+)*@([a-zA-Z0-9]{3,})+\.([a-zA-Z]{3,})$/.test($("#email").val())) {
       $("#emailAlert").addClass("d-none");
@@ -229,7 +229,7 @@ function presentMeal(mealId) {
         }
       }
       console.log(meal);
-      $("#data").html(``);
+      $("#present-meal").html(``);
       $("#present-meal").append(`
             <div class="row text-white">
                 <div class="col-4">
