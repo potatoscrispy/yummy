@@ -41,6 +41,7 @@ $(document).ready(function () {
   });
   $("#search").on("click", function () {
     closeNavbar();
+    $("#main-data").removeClass("d-none");
     $("#searchFood").removeClass("d-none");
     $("#present-meal").addClass("d-none");
     $("#contact-form").addClass("d-none");
@@ -50,6 +51,7 @@ $(document).ready(function () {
   });
   $("#categories").on("click", function () {
     closeNavbar();
+    $("#main-data").removeClass("d-none");
     $("#searchFood").addClass("d-none");
     $("#present-meal").addClass("d-none");
     $("#contact-form").addClass("d-none");
@@ -67,6 +69,7 @@ $(document).ready(function () {
   });
   $("#area").on("click", function () {
     closeNavbar();
+    $("#main-data").removeClass("d-none");
     $("#searchFood").addClass("d-none");
     $("#contact-form").addClass("d-none");
     $("#present-meal").addClass("d-none");
@@ -85,6 +88,7 @@ $(document).ready(function () {
   });
   $("#ingredient").on("click", function () {
     closeNavbar();
+    $("#main-data").removeClass("d-none");
     $("#searchFood").addClass("d-none");
     $("#present-meal").addClass("d-none");
     $("#contact-form").addClass("d-none");
@@ -102,6 +106,7 @@ $(document).ready(function () {
   });
   $("#contact").on("click", function () {
     closeNavbar();
+    $("#main-data").removeClass("d-none");
     $("#contact-form").removeClass("d-none");
     $("#present-meal").addClass("d-none");
     $("#searchFood").addClass("d-none");
