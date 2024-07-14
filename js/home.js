@@ -211,6 +211,7 @@ function presentMealsData(data) {
 }
 
 function presentMeal(mealId) {
+  $("#main-data").addClass("d-none");
   $("#present-meal").removeClass("d-none");
   $.ajax({
     type: "GET",
